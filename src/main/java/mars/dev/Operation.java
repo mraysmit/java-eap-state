@@ -1,22 +1,18 @@
-
 package mars.dev;
 
-import mars.dev.state.ValidationState;
-
 public class Operation {
+    private State state;
 
-    private State state = new ValidationState();
+    public Operation(State state) {
+        this.state = state;
+    }
 
     public void setState(State state) {
         this.state = state;
     }
 
-    public State getState() {
-        return state;
-    }
-
     public void previousState() {
-            state.prev(this);
+        state.prev(this);
     }
 
     public void nextState() {
@@ -25,6 +21,10 @@ public class Operation {
 
     public String getStatus() {
         return state.getStatus();
+    }
+
+    public State getState() {
+        return state;
     }
 
 }
