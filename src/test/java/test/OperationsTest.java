@@ -1,13 +1,37 @@
-package test.mars;
+package test;
 
 import mars.dev.Operation;
+import mars.dev.Trade;
 import mars.dev.state.*;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class OperationsTest {
+
+    @Test
+    public void givenOperation_whenStateSet_thenStateNameRetrieved() {
+        var validationState = new ValidationState("Validation State");
+        Operation op = new Operation(validationState);
+        assertEquals("Validation State", op.getStatus());
+    }
+
+    @Test
+    public void givenOperation_whenStateSet_thenNestStateFalse() {
+        var validationState = new ValidationState("Validation State");
+        Operation op = new Operation(validationState);
+
+        assertFalse(op.hasNextState());
+    }
+
+    @Test
+    public void givenOperation_whenNextStateNotSet_thenThrowNoNextStateException() {
+        var validationState = new ValidationState("Validation State");
+        Operation op = new Operation(validationState);
+        assertThrows(UnsupportedOperationException.class, op::nextState);
+    }
+
+
 
     @Test
     public void givenNewOperation_whenOperationValidated_thenStateCompleted() {
@@ -105,4 +129,31 @@ public class OperationsTest {
         assertEquals("Completed State", op.getStatus());
     }
 
+
+
+
+    @Test
+    public void givenOperation_whenPrevStateNotSet_thenThrowNoPrevStateException() {
+        var validationState = new ValidationState("Validation State");
+        Operation<Trade> op = new Operation<>(validationState);
+        assertThrows(UnsupportedOperationException.class, op::previousState);
+    }
+
+    @Test
+    public void givenOperation_whenPerformAction_thenActionPerformed() {
+        var validationState = new ValidationState("Validation State");
+        Operation<Trade> op = new Operation<>(validationState);
+        Trade trade = new Trade("Trade 1", "ABC Ltd", 1000);
+        assertTrue(op.performAction(trade));
+    }
+
+    @Test
+    public void givenOperation_whenSetState_thenStateIsSet() {
+        var validationState = new ValidationState("Validation State");
+        var confirmationState = new ConfirmationState("Confirmation State");
+        Operation<Trade> op = new Operation<>(validationState);
+        op.setState(confirmationState);
+        assertEquals("Confirmation State", op.getStatus());
+    }
 }
+

@@ -1,11 +1,11 @@
 package mars.dev;
 
-public class Trade {
+public class TradeB {
     private final String tradeId;
     private final String counterpartyId;
     private final double amount;
 
-    public Trade(String tradeId, String counterpartyId, double amount) {
+    public TradeB(String tradeId, String counterpartyId, double amount) {
         this.tradeId = tradeId;
         this.counterpartyId = counterpartyId;
         this.amount = amount;
@@ -24,6 +24,6 @@ public class Trade {
     }
 
     public String toString() {
-        return String.format("Trade Id: %s, Counterparty Id %s, amount: %s", tradeId, counterpartyId, amount);
+        return String.format("Trade Id: %s, Counterparty Id %s, amount: %s, status: %s", tradeId, counterpartyId, amount);
     }
 }

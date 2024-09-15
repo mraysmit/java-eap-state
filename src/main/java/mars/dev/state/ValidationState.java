@@ -3,8 +3,11 @@ package mars.dev.state;
 import mars.dev.Operation;
 import mars.dev.State;
 import mars.dev.Trade;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 public class ValidationState extends AbstractState {
+    private final Logger logger = LogManager.getLogger(ValidationState.class);
 
     public ValidationState(String stateName) {
         super(stateName);
@@ -12,17 +15,11 @@ public class ValidationState extends AbstractState {
 
     @Override
     public boolean performAction(Trade context) {
-        return false;
+        logger.info("Performing action on ValidationState");
+        return true;
     }
 
-    @Override
-    public void next(Operation op) {
-        op.setState(nextState);
-    }
-    @Override
-    public void prev(Operation op) {
-        throw new UnsupportedOperationException("Already in first state.");
-    }
+
 }
 
 

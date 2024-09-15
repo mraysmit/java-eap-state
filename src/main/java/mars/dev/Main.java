@@ -11,21 +11,37 @@ public class Main {
 
         log.info("info message");
 
-        Operation firstOperation = getFirstOperation();
+        Trade trade = new Trade("Trade 1", "ABC Ltd", 1000);
+        log.info(trade.toString());
+
+        Operation<Trade> firstOperation = configureFirstOperation();
 
         log.info(firstOperation.getStatus()); // Prints the status after transitioning to the next state
 
-        firstOperation.nextState();
-        log.info(firstOperation.getStatus()); // Prints the status after transitioning to the next state
+        while (firstOperation.hasNextState())  {
+            firstOperation.performAction(trade); // Prints the action performed by the current state
+            firstOperation.nextState();
+            log.info(firstOperation.getStatus()); // Prints the status after transitioning to the next state
+        };
 
-        firstOperation.nextState();
-        log.info(firstOperation.getStatus()); // Prints the status after transitioning to the next state
+//        firstOperation.performAction(trade); // Prints the action performed by the current state
 
-        firstOperation.nextState();
-        log.info(firstOperation.getStatus()); // Prints the status after transitioning to the next state
+//        firstOperation.nextState();
+//        log.info(firstOperation.getStatus()); // Prints the status after transitioning to the next state
+//
+//        firstOperation.nextState();
+//        log.info(firstOperation.getStatus()); // Prints the status after transitioning to the next state
+//
+//        firstOperation.nextState();
+//        log.info(firstOperation.getStatus()); // Prints the status after transitioning to the next state
     }
 
-    private static Operation getFirstOperation() {
+
+
+
+
+    private static Operation<Trade> configureFirstOperation() {
+        // An example of configuring an Operation with a chain of states
         var validationState = new ValidationState("Validation State");
         var confirmationState = new ConfirmationState("Confirmation State");
         var bookingState = new BookingState("Booking State");

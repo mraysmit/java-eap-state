@@ -1,13 +1,14 @@
+// Operation.java
 package mars.dev;
 
-public class Operation {
-    private State state;
+public class Operation<T> {
+    private State<T> state;
 
-    public Operation(State state) {
+    public Operation(State<T> state) {
         this.state = state;
     }
 
-    public void setState(State state) {
+    public void setState(State<T> state) {
         this.state = state;
     }
 
@@ -23,8 +24,15 @@ public class Operation {
         return state.getStatus();
     }
 
-    public State getState() {
+    public State<T> getState() {
         return state;
     }
 
+    public boolean performAction(T context) {
+        return state.performAction(context);
+    }
+
+    public boolean hasNextState() {
+        return state.hasNextState();
+    }
 }
