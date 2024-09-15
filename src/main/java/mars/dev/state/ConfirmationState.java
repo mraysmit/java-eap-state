@@ -19,15 +19,6 @@ public class ConfirmationState extends AbstractState {
         return true;
     }
 
-    @Override
-    public void next(Operation op) {
-        op.setState(nextState);
-    }
-
-    @Override
-    public void prev(Operation op) {
-        op.setState(prevState);
-    }
 
 
 }

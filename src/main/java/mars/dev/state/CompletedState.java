@@ -19,18 +19,5 @@ public class CompletedState extends AbstractState {
         return true;
     }
 
-    @Override
-    public void next(Operation op) {
-        op.setState(nextState);
-    }
 
-    @Override
-    public void prev(Operation op) {
-        System.out.println("Already in first state.");
-    }
-
-    @Override
-    public boolean hasNextState() {
-        return false;
-    }
 }

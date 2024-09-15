@@ -15,31 +15,31 @@ public abstract class AbstractState implements State<Trade> {
     }
 
     @Override
-    public String getStatus() {
+    public final String getStatus() {
         return stateName;
     }
 
     @Override
-    public void setNextState(State nextState) {
+    public final void setNextState(State nextState) {
         this.nextState = nextState;
     }
 
     @Override
-    public void setPrevState(State prevState) {
+    public final void setPrevState(State prevState) {
         this.prevState = prevState;
     }
 
     @Override
-    public boolean hasNextState() {
+    public final boolean hasNextState() {
         return nextState != null;
     }
     @Override
-    public boolean hasPrevState() {
+    public final boolean hasPrevState() {
         return prevState != null;
     }
 
     @Override
-    public void next(Operation<Trade> op) {
+    public final void next(Operation<Trade> op) {
         if (nextState != null) {
             op.setState(nextState);
         } else {
@@ -48,7 +48,7 @@ public abstract class AbstractState implements State<Trade> {
     }
 
     @Override
-    public void prev(Operation<Trade> op) {
+    public final void prev(Operation<Trade> op) {
         if (prevState != null) {
             op.setState(prevState);
         } else {
