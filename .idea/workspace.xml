@@ -4,19 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="be928fdd-ae6c-41ab-98ed-a8115acfb105" name="Changes" comment="add a few test cases">
-      <change afterPath="$PROJECT_DIR$/src/main/java/mars/dev/TradeB.java" afterDir="false" />
+    <list default="true" id="be928fdd-ae6c-41ab-98ed-a8115acfb105" name="Changes" comment="adjust abstract base">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mars/dev/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/dev/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mars/dev/Operation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/dev/Operation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mars/dev/State.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/dev/State.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mars/dev/Trade.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/dev/Trade.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mars/dev/state/AbstractState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/dev/state/AbstractState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mars/dev/state/BookingState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/dev/state/BookingState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mars/dev/state/CompletedState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/dev/state/CompletedState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mars/dev/state/ConfirmationState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/dev/state/ConfirmationState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mars/dev/state/ValidationState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mars/dev/state/ValidationState.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/test/mars/OperationsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/test/OperationsTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/dev/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/dev/Operation.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/dev/State.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/dev/Trade.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/dev/TradeB.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/dev/state/AbstractState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/mars/AbstractState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/dev/state/BookingState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/mars/BookingState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/dev/state/CompletedState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/mars/CompletedState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/dev/state/ConfirmationState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/mars/ConfirmationState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mars/dev/state/ValidationState.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/dev/mars/ValidationState.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/test/OperationsTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/OperationsTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,47 +43,62 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Downloaded.Files.Path.Enabled": "false",
-    "JUnit.OperationsTest.executor": "Run",
-    "JUnit.OperationsTest.givenNewOperation_whenOperationValidated_thenStateCompleted().executor": "Debug",
-    "JUnit.OperationsTest.givenOperation_whenNextStateNotSet_thenThrowException.executor": "Debug",
-    "JUnit.OperationsTest.givenOperation_whenNextStateNotSet_thenThrowNoNextStateException.executor": "Run",
-    "JUnit.OperationsTest.givenOperation_whenStateSet_thenStateNameRetrieved.executor": "Run",
-    "JUnit.OperationsTest.givenOperation_whenStateSet_thenStateRetrieved.executor": "Run",
-    "JUnit.Tests.executor": "Run",
-    "Repository.Attach.Annotations": "false",
-    "Repository.Attach.JavaDocs": "false",
-    "Repository.Attach.Sources": "false",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/mraysmit/.m2/repository/org/apache/logging/log4j/log4j-api/2.19.0/log4j-api-2.19.0.jar",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;JUnit.OperationsTest.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OperationsTest.givenNewOperation_whenOperationValidated_thenStateCompleted().executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.OperationsTest.givenOperation_whenNextStateNotSet_thenThrowException.executor&quot;: &quot;Debug&quot;,
+    &quot;JUnit.OperationsTest.givenOperation_whenNextStateNotSet_thenThrowNoNextStateException.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OperationsTest.givenOperation_whenStateSet_thenStateNameRetrieved.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.OperationsTest.givenOperation_whenStateSet_thenStateRetrieved.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.Tests.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;false&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;false&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/OneDrive/dev/java/java-eap-state/src/main/java/dev/AbstractState.java&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;two.files.diff.last.used.file&quot;: &quot;D:/OneDrive/dev/java/java-eap-state/src/main/java/dev/AbstractState.java&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\OneDrive\dev\java\java-eap-state\src\main\java\dev" />
+      <recent name="D:\OneDrive\dev\java\java-eap-state\src\main\java\dev\mars" />
       <recent name="D:\OneDrive\dev\java\java-eap-state\src\main\resources" />
       <recent name="D:\OneDrive\dev\java\java-eap-state\src\mars\dev" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="mars.dev" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.OperationsTest">
+  <component name="RunManager" selected="JUnit.OperationsTest (1)">
+    <configuration name="OperationsTest (1)" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="java-eap-state" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="OperationsTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="OperationsTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="java-eap-state" />
       <extension name="coverage">
@@ -95,22 +110,6 @@
       <option name="PACKAGE_NAME" value="test" />
       <option name="MAIN_CLASS_NAME" value="test.OperationsTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="OperationsTest.givenOperation_whenNextStateNotSet_thenThrowException" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="java-eap-state" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="test" />
-      <option name="MAIN_CLASS_NAME" value="test.OperationsTest" />
-      <option name="METHOD_NAME" value="givenOperation_whenNextStateNotSet_thenThrowException" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -175,29 +174,21 @@
     </configuration>
     <list>
       <item itemvalue="JUnit.Tests" />
+      <item itemvalue="JUnit.OperationsTest (1)" />
       <item itemvalue="JUnit.OperationsTest" />
-      <item itemvalue="JUnit.OperationsTest.givenOperation_whenNextStateNotSet_thenThrowException" />
       <item itemvalue="JUnit.OperationsTest.givenOperation_whenNextStateNotSet_thenThrowNoNextStateException" />
       <item itemvalue="JUnit.OperationsTest.givenOperation_whenStateSet_thenStateNameRetrieved" />
       <item itemvalue="JUnit.OperationsTest.givenOperation_whenStateSet_thenStateRetrieved" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.OperationsTest (1)" />
         <item itemvalue="JUnit.OperationsTest" />
         <item itemvalue="JUnit.OperationsTest.givenOperation_whenStateSet_thenStateRetrieved" />
         <item itemvalue="JUnit.OperationsTest.givenOperation_whenStateSet_thenStateNameRetrieved" />
         <item itemvalue="JUnit.OperationsTest.givenOperation_whenNextStateNotSet_thenThrowNoNextStateException" />
-        <item itemvalue="JUnit.OperationsTest.givenOperation_whenNextStateNotSet_thenThrowException" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
-        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -209,7 +200,15 @@
       <updated>1726156988773</updated>
       <workItem from="1726156990142" duration="37456000" />
       <workItem from="1726311035896" duration="2004000" />
-      <workItem from="1726336933585" duration="14934000" />
+      <workItem from="1726336933585" duration="17570000" />
+      <workItem from="1726587564025" duration="72000" />
+      <workItem from="1726587670173" duration="836000" />
+      <workItem from="1726597890986" duration="200000" />
+      <workItem from="1726598286820" duration="351000" />
+      <workItem from="1726598693210" duration="702000" />
+      <workItem from="1726599449333" duration="628000" />
+      <workItem from="1726600090407" duration="19000" />
+      <workItem from="1726600120623" duration="187000" />
     </task>
     <task id="LOCAL-00001" summary="add a few test cases">
       <option name="closed" value="true" />
@@ -219,7 +218,23 @@
       <option name="project" value="LOCAL" />
       <updated>1726162177544</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add a few test cases">
+      <option name="closed" value="true" />
+      <created>1726412509300</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1726412509300</updated>
+    </task>
+    <task id="LOCAL-00003" summary="adjust abstract base">
+      <option name="closed" value="true" />
+      <created>1726412977621</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1726412977621</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -227,23 +242,24 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add a few test cases" />
-    <option name="LAST_COMMIT_MESSAGE" value="add a few test cases" />
+    <MESSAGE value="adjust abstract base" />
+    <option name="LAST_COMMIT_MESSAGE" value="adjust abstract base" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/test/OperationsTest.java</url>
-          <line>68</line>
+          <url>file://$PROJECT_DIR$/src/test/java/OperationsTest.java</url>
+          <line>71</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mars/dev/Main.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/mars/test/dev/Main.java</url>
           <line>13</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/mars/dev/Main.java</url>
+          <url>file://$PROJECT_DIR$/src/main/java/mars/test/dev/Main.java</url>
           <line>16</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>

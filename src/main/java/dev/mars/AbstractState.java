@@ -1,9 +1,7 @@
-// src/mars/dev/state/AbstractState.java
-package mars.dev.state;
 
-import mars.dev.Operation;
-import mars.dev.State;
-import mars.dev.Trade;
+package dev.mars;
+
+
 
 public abstract class AbstractState implements State<Trade> {
     protected final String stateName;
